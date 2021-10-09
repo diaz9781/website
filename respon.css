@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background: url(https://www.xtrafondos.com/wallpapers/figuras-abstractas-rosas-y-azules-5649.jpg);
+  background-size: 100vw 100vh;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+.header {
+  grid-area: header;
+  color: #fdfdfd;
+  background-color: #5387c3;
+  background-size: 100vw 100vh;
+	background-image: url(imagenes/fondo3.jpg);
+  align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #50a5d6;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #00bfd8;
+}
+
+.main {
+  grid-area: main;
+  background-color: #86d7dd;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #3d7092;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+      200px    auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar navbar navbar" 50px
+      "main  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+ul,ol{
+	list-style:none;
+	background: rgb(0, 134, 223);
+	}
+	
+	.nav li a{
+		color:#803880;
+    background-color:#ca93be;
+		text-decoration:none;
+		padding:5.5px 38px;
+		display:block;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 35px;
+		border: solid 2px #fdfdfd;
+	}
+.nav li a.active{
+	  background-color:#e095c7;
+		color:#000000;
+		font-weight:bolder;
+		font-size: 13pt;
+}
+.nav li a:hover{
+	background-color:#11cedb;
+	color:#000000;
+	font-size: 14pt;
+}
+.nav > li{
+	float:left;
+}
+.nav li ul{
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+.nav li:hover > ul{
+	display:block;		
+}
+.nav li ul li{
+	position:relative;
+}
+	.nav li ul li ul{
+	right:-130px;
+	top:0px;
+}
